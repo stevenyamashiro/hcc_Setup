@@ -111,10 +111,6 @@
             /* text-emphasis-style: sesame; */
         }
 
-        .hccGroupHeading {
-            text-decoration: underline;
-        }
-
         .hccTestColors {
             color: #7c8a5e;
             color: #4e6128;
@@ -152,7 +148,7 @@
                 </div>
                 <div class="modal-body hccModalText">
                     <div class="form-group">
-                        <label for="shadeTolSelect" class="hccGroupHeading">How sunny is your site?</label>
+                        <label for="shadeTolSelect">How sunny is your site?</label>
                         <select class="form-control" id="shadeTolSelect">
                             <option value='full'>Full sun (6 hrs direct light daily)</option>
                             <option value='partial'>Partial shade (4-6 hrs light daily)</option>
@@ -161,7 +157,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="waterRequirementsSelect" class="hccGroupHeading">How wet is your site?</label>
+                        <label for="waterRequirementsSelect">How wet is your site?</label>
                         <select class="form-control" id="waterRequirementsSelect">
                             <option valtlee='wet'>Wet</option>
                             <option value='medium'>Medium</option>
@@ -169,8 +165,6 @@
                             <option value='dryCanIrrigate'>Dry, but I can irrigate as needed</option>
                         </select>
                     </div>
-
-                    <legend class="col-form-label col pt-0 hccGroupHeading">Requirements</legend>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="yes" id="windyCheckBox">
                         <label class="form-check-label" for="windyCheckBox">
@@ -210,7 +204,6 @@
                 <div class="modal-body hccModalText">
                     <div class="row">
                         <div class="col col-sm-6">
-                            <legend class="col-form-label col pt-0 hccGroupHeading">Sizes that Work</legend>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="bigCheckBox">
                                 <label class="form-check-label" for="bigCheckBox">
@@ -238,7 +231,6 @@
                         </div>
 
                         <div class="col col-sm-6">
-                            <legend class="col-form-label col pt-0 hccGroupHeading">Requirements</legend>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="shadeCheckBox">
                                 <label class="form-check-label" for="shadeCheckBox">
@@ -296,15 +288,14 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title hccModalHeading" id="treeViewLabel">Tree View</h5> <button type="button"
-                        class="btn btn-success hccBtn" data-dismiss="modal">Close</button>
+                    <h5 class="modal-title hccModalHeading" id="treeViewLabel">Tree View</h5>
                 </div>
                 <div class="modal-body hccModalText">
-                    <img id='largeImg' src="./images/' + fullTreeImage + '_2.jpg" class="card-img-top"
+                    <img id='largeImg' src="./images/' + fullTreeImage + '.jpg" class="card-img-top"
                         alt="' + fullTreeImage + '">
                 </div>
                 <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-success hccBtn" data-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-success hccBtn" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -312,26 +303,11 @@
 
     <div class='container'>
         <div class='row'>&nbsp;</div>
-        <div class='row'>
-            <div class="col col-sm-4">
-                <!-- <img src="justree_50.png" alt="" loading="lazy"><img src="justree_25.png" alt="" loading="lazy"> -->
-                <a href="https://www.treesforhonolulu.org/"><img src="TFHF-Stacked-Crop_100.png" alt=""
-                        loading="lazy"></a>
-
-            </div>
-            <div class="col col-sm-4">
-                <!-- <a href="http://www.healthyclimatecommunities.org"><img src="logo-hhc.png" alt="" loading="lazy"></a> -->
-                <a href="http://www.healthyclimatecommunities.org"><img
-                        src="HCC_ Stacked_150.png" alt="" loading="lazy"></a>
-            </div>
-
-            <div class="col col-sm-4">
-                <br />
-                <a href=""><img src="Ernest_100.png" alt="" loading="lazy"></a>
-            </div>
-        </div>
+        <a href="http://www.healthyclimatecommunities.org"><img src="logo-hhc.png" alt="" loading="lazy"></a>
+            <!-- <img src="justree_50.png" alt="" loading="lazy"><img src="justree_25.png" alt="" loading="lazy"> -->
+            
         <div class='row'>&nbsp;</div>
-    </div>
+        <div class='row'>RIGHT TREE HAWAIʻI</div>
     </div>
     <div class='hccNav'>
         <div class='container'>
@@ -347,16 +323,9 @@
                 <button type="button" class="btn btn-success hccBtn" data-toggle="modal" data-target="#smPreference">
                     Select Preferences
                 </button>
-
-                <form class="form-inline">
-                    <input id="searcher" class="form-control mr-sm-2" type="search" placeholder="Enter name or color"
-                        aria-label="Search">
-                    <!--  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-                </form>
             </nav>
             <ol id="filterBreadCrumb" class="breadcrumb hccNav">
                 <li id='filterBreadCrumbLst' class="breadcrumb-item">&nbsp;</li>
-                <li id='filterCount' class="breadcrumb-item">test</li>
             </ol>
 
         </div>
@@ -373,14 +342,14 @@
         var getCard = (smallImage, plantInfo) => {
             var card = '            <div class="card hccCardGreenBorder" data-name="">';
             card += '    <img src="./images/' + smallImage + '.jpg" class="card-img-top" alt="' + smallImage + ' Image">';
-            card += '<button type="button" id="' + smallImage + '" class="btn btn-sm btn-outline-success hccTreeViewBtn" data-toggle="modal" data-target="#treeViewModal">View Tree</button>';
+            card += '<button type="button" id="' + smallImage + '" class="btn btn-sm btn-outline-success hccTreeViewBtn" data-toggle="modal" data-target="#treeViewModal">View Tree Detail</button>';
             card += '                <div class="card-body hccCardGreenText">';
             card += '                    <h5 class="card-title">' + plantInfo.species + '</h5>';
-            card += '                    <p class="card-text">' + plantInfo.exHeight + ' ft expected mature height<br>' + plantInfo.exSpread + ' ft expected mature spread<br>';
-            card += '                        ' + plantInfo.crownDens + ' leaf canopy<br>Growth Habit: ' + plantInfo.growthHabit + '<br>' + plantInfo.growthRate + 'growth habit<br>' + plantInfo.rubbish + ' rubbish (leaves)';
-            card += '                        <br>' + plantInfo.maintenance + ' maintenance<br>' + plantInfo.elevation + ' elevation';
+            card += '                    <p class="card-text">' + plantInfo.exHeight + 'ft expected mature height<br> Expected mature spread (ft): ' + plantInfo.exSpread + '<br> Leaf';
+            card += '                        canopy density: ' + plantInfo.crownDens + '<br>Growth Habit: ' + plantInfo.growthHabit + '<br>Growth Rate: ' + plantInfo.growthRate + '<br>Rubbish: ' + plantInfo.rubbish;
+            card += '                        <br>Maintenance: ' + plantInfo.maintenance + '<br>Elevation:' + plantInfo.elevation;
 
-            card += '                        <br>' + plantInfo.waterReq + ' water requirements<br>' + plantInfo.shadeTol + ' shade tolerance';
+            card += '                        <br>Water Requirements: ' + plantInfo.waterReq + '<br>Shade Tolerance:' + plantInfo.shadeTol;
 
             /*
         nativeDesc
@@ -395,14 +364,14 @@
 
             // if(plantInfo.nativeDesc!='') {card += '<br>Origin: ' + plantInfo.nativeDesc }
 
-            card += getInfoIfExistSingle('hccProperty', plantInfo.nativeDesc);
-            card += getInfoIfExistSingle('hccProperty', (plantInfo.flowerFood.trim() == '' ? '' : plantInfo.flowerFood.trim() + ' flowers'));
-            card += getInfoIfExistSingle('hccProperty', plantInfo.seasonOfBloom);
-            card += getInfoIfExistSingle('hccProperty', (plantInfo.droughtTol.trim() == '' ? '' : 'Drought Tolerant'));
-            card += getInfoIfExistSingle('hccProperty', (plantInfo.saltTol.trim() == 'yes' ? 'Salt Tolerant' : ''));
-            card += getInfoIfExistSingle('hccProperty', (plantInfo.windTol.trim() == 'yes' ? 'Wind Tolerant' : ''));
-            card += getInfoIfExistSingle('hccPropertyRedFlag', plantInfo.intrusiveRoots);
-            card += getInfoIfExistSingle('hccPropertyRedFlag', plantInfo.poisonous);
+            card += getInfoIfExist('hccProperty', 'Origin', plantInfo.nativeDesc);
+            card += getInfoIfExist('hccProperty', 'Flowers/Food', plantInfo.flowerFood);
+            card += getInfoIfExist('hccProperty', 'Seasons of Bloom', plantInfo.seasonOfBloom);
+            card += getInfoIfExist('hccProperty', 'Drought Tolerant', plantInfo.droughtTol);
+            card += getInfoIfExist('hccProperty', 'Salt Tolerant', plantInfo.saltTol);
+            card += getInfoIfExist('hccProperty', 'Wind Tolerant', plantInfo.windTol);
+            card += getInfoIfExist('hccPropertyRedFlag', 'Intrusive Roots', plantInfo.intrusiveRoots);
+            card += getInfoIfExist('hccPropertyRedFlag', 'Poisonous', plantInfo.poisonous);
             card += '                </div>'
 
             card += '<footer class="hccCite">&nbsp;&nbsp; Detailed image By: <cite title="Source Title">' + plantInfo.photoDetail + '</cite></footer>';
@@ -414,11 +383,6 @@
 
         var getInfoIfExist = (thisClass, fieldName, fieldDescription) => {
             if (fieldDescription != '') { return '<br><span class="' + thisClass + '">' + fieldName + ': ' + fieldDescription + '</span>' }
-            return '';
-        }
-
-        var getInfoIfExistSingle = (thisClass, fieldDescription) => {
-            if (fieldDescription != '') { return '<br><span class="' + thisClass + '">' + fieldDescription + '</span>' }
             return '';
         }
 
@@ -466,11 +430,6 @@
 
                 displayCount++;
             }
-
-            if (thisRowCards != '') {
-                var thisRow = (displayCount != 1 ? '<habitdiv class="row">&nbsp;</div>' : '') + getCardRow(thisRowCards);
-                $('#treeDisplay').append(thisRow);
-            }
         }
 
         setCards(dataSet);
@@ -480,14 +439,12 @@
         var filter = function () {
             var returnObj = {};
             var filters = {
-                nameOrColor: '',
                 shadeTol: '', waterReq: '', windTol: false, saltTol: false, constrictedRoot: false,
                 big: false, medium: false, small: false, compact: false, shade: '', edible: '', flowers: '', native: '', droughtTol: '', barrier: '',
                 palm: ''
             };
 
             var initialDataSet;
-            var filteredData = [];
 
             returnObj.setData = (thisInitialData) => {
                 console.log('Set Data as ' + JSON.stringify(thisInitialData))
@@ -503,7 +460,7 @@
             }
 
             returnObj.getFiltered = () => {
-                filteredData = [];
+                var filteredData = [];
 
                 initialDataSet.forEach((thisRec) => {
                     var passShadeTolVal = passShade(thisRec.shadeTol);
@@ -522,7 +479,6 @@
                     var passBarrierVal = passYesBool(thisRec.goodBarrier, filters.barrier);
                     var passPalmVal = passYesBool(thisRec.palm, filters.palm);
                     var passSizeVal = passSize(thisRec.size);
-                    var passNameOrColorVal = passNameOrColor(thisRec.species, thisRec.flowerFood, filters.nameOrColor);
 
 
                     // var passWindyTolVal=passWindyTol(thisRec.windTol);
@@ -530,8 +486,8 @@
 
                     if (passShadeTolVal && passWaterReqVal && passWindyTolVal && passSaltTolVal && passConstrictedRootVal
                         && passShadeVal && passEdibleVal && passFlowersVal && passNativeVal && passDroughtTolVal && passBarrierVal && passPalmVal
-                        && passSizeVal && passNameOrColorVal
-                    ) {
+                        &&  passSizeVal
+                        ) {
                         filteredData.push(thisRec);
                     }
                 })
@@ -546,7 +502,6 @@
                 var siteArray = [];
                 var sizeArray = [];
                 var preferencesArray = [];
-                var searchFor = '';
 
 
                 if (filters.shadeTol != '') {
@@ -610,18 +565,10 @@
                     forReader += (forReader == '' ? '' : ', ') + '[ Preferences: ' + preferencesArray.join(', ') + ']';
                 }
 
-                if (filters.nameOrColor != '') {
-                    forReader += (forReader == '' ? '' : ', ') + '[ Search: ' + filters.nameOrColor + ']';
-                }
-
-                forReader += (forReader == '' ? '' : ', ') + '[ Tree Count: ' + filteredData.length + ']';
-
-
                 $('#filterBreadCrumb').text('Selection(s) - ' + forReader);
                 return forReader;
             }
 
-            /*
             returnObj.setBreadCrumbToFilter = () => {
                 var filterKeys = Object.keys(filters);
 
@@ -636,10 +583,10 @@
 
                 $('#filterBreadCrumb').text(returnObj.packageFiltersForReader);
             }
-            */
+
 
             function passShade(thisVal) {
-                //   console.log('Check on ' + thisVal);
+             //   console.log('Check on ' + thisVal);
                 if (filters.shadeTol == 'shade' && thisVal != 'good') { return false; }
                 if (filters.shadeTol == 'partial' && (thisVal != 'good' && thisVal != 'medium')) { return false; }
                 //  (thisVal!='good' || thisVal!='medium') => (thisVal=='poor')
@@ -648,7 +595,7 @@
             }
 
             function passWaterReq(thisVal) {
-                //  console.log('Pass Water Req =' + thisVal + '  waterReq=' + filters.waterReq);
+              //  console.log('Pass Water Req =' + thisVal + '  waterReq=' + filters.waterReq);
 
                 if (thisVal == 'all') { return true; }
                 if (filters.waterReq == 'dryCanIrrigate') { return true; }
@@ -658,7 +605,7 @@
             }
 
             function passWindyTol(thisVal) {
-                //  console.log('passWindyTol=' + thisVal + '  windTol=' + filters.windTol);
+              //  console.log('passWindyTol=' + thisVal + '  windTol=' + filters.windTol);
 
                 if (!filters.windTol) { return true };
                 return (filters.windTol && (thisVal == 'yes'))
@@ -672,23 +619,16 @@
             function passSize(thisVal) {
                 // compact small medium large
 
-                //    console.log('Size = '+ thisVal);
-                //    console.log(JSON.stringify(filters));
+            //    console.log('Size = '+ thisVal);
+            //    console.log(JSON.stringify(filters));
 
-                if (!filters.compact && !filters.small && !filters.medium && !filters.big) { return true; }
+                if(!filters.compact && !filters.small && !filters.medium && !filters.big) {return true;}
 
                 console.log((((thisVal == 'compact') && (filters.compact)) || ((thisVal == 'small') && (filters.small))
                     || ((thisVal == 'medium') && (filters.medium)) || ((thisVal == 'large') && (filters.big))));
 
                 return (((thisVal == 'compact') && (filters.compact)) || ((thisVal == 'small') && (filters.small))
                     || ((thisVal == 'medium') && (filters.medium)) || ((thisVal == 'large') && (filters.big)));
-            }
-
-            function passNameOrColor(thisName, thisColor, filterVal) {
-                // console.log('In passNameOrColor');
-                // console.log(thisName,thisColor, filterVal);
-                if (filterVal == '') { return true };
-                return (filterVal && ((thisName.toUpperCase().indexOf(filterVal) != -1) || (thisColor.toUpperCase().indexOf(filterVal) != -1)))
             }
 
             return returnObj;
@@ -859,22 +799,6 @@
             $('#treeViewLabel').text(thisTreeId);
             $('#largeImg').attr('src', './images/' + thisTreeId + '_2.jpg');
         })
-
-        $('#searcher').keyup(() => {
-            var thisVal = $('#searcher').val();
-            console.log(thisVal.length);
-
-            if (thisVal.length > 2) {
-                filter.setFilter('nameOrColor', thisVal.toUpperCase());
-                console.log(JSON.stringify(filter.getFilters()))
-            }
-            else {
-                filter.setFilter('nameOrColor', '');
-                console.log(JSON.stringify(filter.getFilters()))
-            }
-
-            resetCards();
-        });
 
 
         filter.setData(dataSet);
